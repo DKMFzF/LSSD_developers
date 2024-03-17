@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FireBase__2</string>
+    <string name="app_compani_name">LSSDeveloper Studio</string>
+    <string name="btnIn">ВОЙТИ</string>
+    <string name="btnUp">регистрация</string>
+    <string name="battonString_2">Read</string>
+    <string name="name">Email</string>
+    <string name="subName">Фамилия</string>
+    <string name="pass">Пароль</string>
+    <string name="accCreated">Создать аккаунт</string>
+    <string name="passRepeat">Повторите пароль</string>
+    <string name="openAcc">Вы вошли в акаунт</string>
+    <string name="exitAcc">Выйти</string>
+    <string name="start">Main</string>
+    <string name="appWelcome">Welcome</string>
+    <string name="registName">Имя</string>
+    <string name="finishRegist">Проверте почту!</string>
+    <string name="ok">Ok</string>
+</resources>

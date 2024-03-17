@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "37500415480",
+    "firebase_url": "https://basedata-68658-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "basedata-68658",
+    "storage_bucket": "basedata-68658.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37500415480:android:ffbc4e21ac6039cd5f3a0d",
+        "android_client_info": {
+          "package_name": "com.example.firebase__2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ_Sj2J3z9PIguXS0NpJEl6Uk0UUXtWR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
