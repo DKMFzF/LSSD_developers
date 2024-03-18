@@ -143,21 +143,23 @@ public class LoginActivity extends AppCompatActivity {
 
         assert user != null;
         if (user.isEmailVerified()) {
-
-            String useName = "Вы вошли как -> " + user.getEmail();
-            openAcc.setText(useName);
-
-            // Показывает
-            exitAcc.setVisibility(View.VISIBLE);
-            openAcc.setVisibility(View.VISIBLE);
-            // startMain.setVisibility(View.VISIBLE);
-
-            // Не показывает
-            labale.setVisibility(View.GONE);
-            usrName.setVisibility(View.GONE);
-            pass.setVisibility(View.GONE);
-            btRegist.setVisibility(View.GONE);
-            btLogin.setVisibility(View.GONE);
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+//            String useName = "Вы вошли как -> " + user.getEmail();
+//            openAcc.setText(useName);
+//
+//            // Показывает
+//            exitAcc.setVisibility(View.VISIBLE);
+//            openAcc.setVisibility(View.VISIBLE);
+//            // startMain.setVisibility(View.VISIBLE);
+//
+//            // Не показывает
+//            labale.setVisibility(View.GONE);
+//            usrName.setVisibility(View.GONE);
+//            pass.setVisibility(View.GONE);
+//            btRegist.setVisibility(View.GONE);
+//            btLogin.setVisibility(View.GONE);
 
             // тут должна быть проверка в БД
         } else {
