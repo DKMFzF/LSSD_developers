@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         assert user != null;
         String useName = "Вы вошли как -> " + user.getEmail();
         openAcc.setText(useName);
-
     }
 
 

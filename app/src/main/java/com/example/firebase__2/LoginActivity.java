@@ -51,15 +51,9 @@ public class LoginActivity extends AppCompatActivity {
         if (cUser != null) {
             exitShowAcc();
 
-            // Вывод информации
-            String use = "Вы вошли как -> " + cUser.getEmail();
-            openAcc.setText(use);
-
             Toast.makeText(this, "Данные есть",
                     Toast.LENGTH_SHORT).show(); // Отладка
         } else {
-            showLoginAcc();
-
             Toast.makeText(this, "Данных нет",
                     Toast.LENGTH_SHORT).show(); // Отладка
         }
@@ -68,12 +62,11 @@ public class LoginActivity extends AppCompatActivity {
 
     // Инициализация компонентов
     private void init() {
-        startMain = findViewById(R.id.startMain);
+
         btRegist = findViewById(R.id.btRegist);
         btLogin = findViewById(R.id.btLogin);
         labale = findViewById(R.id.labale);
-        exitAcc = findViewById(R.id.exitAcc);
-        openAcc = findViewById(R.id.openAcc);
+
         usrName = findViewById(R.id.usrName);
         pass = findViewById(R.id.pass);
 
@@ -115,28 +108,6 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    // Метод выхода из акаунта
-    public void onClickExitAcc(View view) {
-        FirebaseAuth.getInstance().signOut();
-        showLoginAcc();
-        usrName.setText("");
-        pass.setText("");
-    }
-
-    // Скрывает и показывает элементы
-    public void showLoginAcc() {
-        // Не показывает
-        exitAcc.setVisibility(View.GONE);
-        openAcc.setVisibility(View.GONE);
-        // startMain.setVisibility(View.GONE);
-
-        // Показыает
-        labale.setVisibility(View.VISIBLE);
-        usrName.setVisibility(View.VISIBLE);
-        pass.setVisibility(View.VISIBLE);
-        btRegist.setVisibility(View.VISIBLE);
-        btLogin.setVisibility(View.VISIBLE);
-    }
 
     public void exitShowAcc() {
         FirebaseUser user = mAuth.getCurrentUser();
@@ -146,20 +117,6 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
-//            String useName = "Вы вошли как -> " + user.getEmail();
-//            openAcc.setText(useName);
-//
-//            // Показывает
-//            exitAcc.setVisibility(View.VISIBLE);
-//            openAcc.setVisibility(View.VISIBLE);
-//            // startMain.setVisibility(View.VISIBLE);
-//
-//            // Не показывает
-//            labale.setVisibility(View.GONE);
-//            usrName.setVisibility(View.GONE);
-//            pass.setVisibility(View.GONE);
-//            btRegist.setVisibility(View.GONE);
-//            btLogin.setVisibility(View.GONE);
 
             // тут должна быть проверка в БД
         } else {
